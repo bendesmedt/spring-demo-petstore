@@ -8,7 +8,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
 `/pet` Add a new pet to the store
  
  Example of pet in body:
-     <pre><code>    {
+ <pre><code>    {
        "id": 0,
        "category": {
            "id": 5,
