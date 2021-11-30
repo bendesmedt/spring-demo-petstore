@@ -33,7 +33,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
      }</code></pre>
 
 
- ###PUT 
+ ### PUT 
 `/pet` Update an existing pet
  
  Example of pet in body:
@@ -61,7 +61,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
        "status": "SOLD"
      }</code></pre>
 
- ###GET
+ ### GET
 `/pet/findByStatus` Finds Pets by status
 
  Example of Request URL:
@@ -71,7 +71,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
 
 </code></pre>
 
- ###GET
+ ### GET
 `/pet/findByTags` Finds Pets by tags
 
  Example of Request URL:
@@ -81,7 +81,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
 
 </code></pre>
 
- ###GET
+ ### GET
 `/pet/{petId}` Find pet by ID
 
  Example of Request URL:
@@ -91,7 +91,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
 
 </code></pre>
 
- ###DELETE
+ ### DELETE
 `/pet/{petId}` Deletes a pet
 
  Example of Request URL:
@@ -101,7 +101,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
 
 </code></pre>
 
-###POST
+### POST
 `/pet/{petId}/uploadImage` Adds an image url
 
 Example of url in body:
@@ -136,7 +136,7 @@ Example of order in body:
         "complete": false
     }</code></pre>
 
-###GET
+### GET
 `/store/order/{orderId}` Find purchase order by ID
 
 Example of Request URL:
@@ -146,7 +146,7 @@ Example of Request URL:
 
 </code></pre>
 
-###DELETE
+### DELETE
 `/store/order/{orderId}` Delete purchase order by ID
 
 Example of Request URL:
@@ -158,7 +158,7 @@ Example of Request URL:
 ***
 ## USER - Operations about user
 
-###POST
+### POST
 `/user` Create user
 
 Example of User in body:
@@ -173,7 +173,7 @@ Example of User in body:
       "userStatus": 1
     }</code></pre>
 
-###POST
+### POST
 `/user/createWithArray`  Creates list of users with given input array
 
 `/user/createWithList`  Creates list of users with given input array
@@ -202,7 +202,7 @@ Example of Users in body:
         }
     ]</code></pre>
 
-###GET
+### GET
 `/user/login`  Logs user into the system
 
 Example of Request URL:
@@ -212,7 +212,7 @@ Example of Request URL:
 
 </code></pre>
 
-###GET
+### GET
 `/user/logout` Logs out current logged in user session
 
 Example of Request URL:
@@ -222,7 +222,7 @@ Example of Request URL:
 
 </code></pre>
 
-###GET
+### GET
 `/user/{username}` Get user by username
 
 Example of Request URL:
@@ -232,7 +232,7 @@ Example of Request URL:
 
 </code></pre>
 
-###PUT
+### PUT
 `/user/{username}` Update user
  <pre><code>    {
       "id": 86,
@@ -245,7 +245,7 @@ Example of Request URL:
       "userStatus": 666
     }</code></pre>
 
-###DELETE
+### DELETE
 `/user/{username}` Delete user
 
 Example of Request URL:
