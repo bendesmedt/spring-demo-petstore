@@ -86,7 +86,6 @@ public class PetController {
     }
 
     @PostMapping("/{id}/uploadImage")
-//    public ResponseEntity postPetPic(@PathVariable Long id, @RequestBody MultipartFile file) {
     public ResponseEntity postPetPic(@PathVariable Long id, @RequestBody String imageUrl) {
 
         var optionalPet = petService.uploadImage(id, imageUrl);
