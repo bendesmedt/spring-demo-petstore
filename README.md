@@ -2,9 +2,9 @@
 
 This is a demo REST-API for a petstore using the sample server by [Swagger](https://petstore.swagger.io/). It has several end-points which have their own RestControllers.
 
-##PET - Everything about your Pets
+## PET - Everything about your Pets
 
- ###POST 
+### POST 
 `/pet` Add a new pet to the store
  
  Example of pet in body:
