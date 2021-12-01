@@ -20,21 +20,21 @@ public class SpringDemoPetApplication {
     }
 
     private static void generateData(ConfigurableApplicationContext context) {
-        List<Category> categories = context
-                .getBean(CategoryRepo.class)
+        var categories = context
+                .getBean(CategoryRepository.class)
                 .saveAll(DataFactory.getCategories());
 
-        List<Tag> tags = context
-                .getBean(TagRepo.class)
+        var tags = context
+                .getBean(TagRepository.class)
                 .saveAll(DataFactory.getTags());
 
 
-        List<Pet> pets = context
-                .getBean(PetRepo.class)
+        var pets = context
+                .getBean(PetRepository.class)
                 .saveAll(DataFactory.getPets(tags, categories));
 
-        List<User> users = context
-                .getBean(UserRepo.class)
+        var users = context
+                .getBean(UserRepository.class)
                 .saveAll(DataFactory.getUsers());
 
         categories.forEach(System.out::println);

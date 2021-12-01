@@ -1,6 +1,8 @@
 # Spring Demo - Petstore
 
-This is a demo REST-API for a petstore using the sample server by [Swagger](https://petstore.swagger.io/). It has several end-points which have their own RestControllers.
+This is a demo REST-API for a petstore using the sample server by [Swagger](https://petstore.swagger.io/). 
+This project implements Spring Data JPA with some custom JPQL queries, Spring web with various api endpoints.
+It utilises an H2 database and the Lombok library.
 
 ## PET - Everything about your Pets
 
@@ -67,7 +69,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
  Example of Request URL:
  
  <pre><code>
-    http://localhost:8080/pet/findByStatus?status=available&status=pending
+    http://localhost:8080/api/pet/findByStatus?status=available&status=pending
 
 </code></pre>
 
@@ -77,7 +79,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
  Example of Request URL:
  
  <pre><code>
-    http://localhost:8080/pet/findByTags?tags=safe%20with%20kids&tags=can%20be%20home%20alone
+    http://localhost:8080/api/pet/findByTags?tags=safe%20with%20kids&tags=can%20be%20home%20alone
 
 </code></pre>
 
@@ -87,7 +89,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
  Example of Request URL:
  
  <pre><code>
-    http://localhost:8080/pet/42
+    http://localhost:8080/api/pet/42
 
 </code></pre>
 
@@ -97,7 +99,7 @@ This is a demo REST-API for a petstore using the sample server by [Swagger](http
  Example of Request URL:
  
  <pre><code>
-    http://localhost:8080/pet/87
+    http://localhost:8080/api/pet/87
 
 </code></pre>
 
@@ -119,7 +121,7 @@ Example of url in body:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/store/inventory
+    http://localhost:8080/api/store/inventory
 
 </code></pre>
 
@@ -142,7 +144,7 @@ Example of order in body:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/store/order/88
+    http://localhost:8080/api/store/order/88
 
 </code></pre>
 
@@ -152,7 +154,7 @@ Example of Request URL:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/store/order/88
+    http://localhost:8080/api/store/order/88
 
 </code></pre>
 ***
@@ -208,7 +210,7 @@ Example of Users in body:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/user/login?username=speiser20&password=DWj3zSxs
+    http://localhost:8080/api/user/login?username=speiser20&password=DWj3zSxs
 
 </code></pre>
 
@@ -218,7 +220,7 @@ Example of Request URL:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/user/logout
+    http://localhost:8080/api/user/logout
 
 </code></pre>
 
@@ -228,7 +230,7 @@ Example of Request URL:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/user/BabaYaga
+    http://localhost:8080/api/user/BabaYaga
 
 </code></pre>
 
@@ -251,6 +253,6 @@ Example of Request URL:
 Example of Request URL:
 
 <pre><code>
-    http://localhost:8080/user/RealJedi
+    http://localhost:8080/api/user/RealJedi
 
 </code></pre>

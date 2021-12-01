@@ -1,7 +1,7 @@
 package ben.desmedt.springdemopet.services;
 
 import ben.desmedt.springdemopet.models.Pet;
-import ben.desmedt.springdemopet.repositories.PetRepo;
+import ben.desmedt.springdemopet.repositories.PetRepository;
 import ben.desmedt.springdemopet.services.validators.PetValidator;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +13,10 @@ import java.util.function.Predicate;
 @Service
 public class PetService {
 
-    private final PetRepo repository;
+    private final PetRepository repository;
     private final PetValidator validator;
 
-    public PetService(PetRepo repository, PetValidator validator) {
+    public PetService(PetRepository repository, PetValidator validator) {
         this.repository = repository;
         this.validator = validator;
     }

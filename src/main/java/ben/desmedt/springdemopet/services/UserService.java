@@ -1,7 +1,7 @@
 package ben.desmedt.springdemopet.services;
 
 import ben.desmedt.springdemopet.models.User;
-import ben.desmedt.springdemopet.repositories.UserRepo;
+import ben.desmedt.springdemopet.repositories.UserRepository;
 import ben.desmedt.springdemopet.services.validators.UserValidator;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +12,10 @@ import java.util.function.Predicate;
 @Service
 public class UserService {
 
-    private final UserRepo repository;
+    private final UserRepository repository;
     private final UserValidator validator;
 
-    public UserService(UserRepo repository, UserValidator validator) {
+    public UserService(UserRepository repository, UserValidator validator) {
         this.repository = repository;
         this.validator = validator;
     }

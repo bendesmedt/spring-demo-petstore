@@ -2,8 +2,8 @@ package ben.desmedt.springdemopet.services;
 
 import ben.desmedt.springdemopet.models.Order;
 import ben.desmedt.springdemopet.models.Pet;
-import ben.desmedt.springdemopet.repositories.OrderRepo;
-import ben.desmedt.springdemopet.repositories.PetRepo;
+import ben.desmedt.springdemopet.repositories.OrderRepository;
+import ben.desmedt.springdemopet.repositories.PetRepository;
 import ben.desmedt.springdemopet.services.validators.OrderValidator;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +13,11 @@ import java.util.Optional;
 @Service
 public class StoreService {
 
-    private final OrderRepo orderRepository;
-    private final PetRepo petRepository;
+    private final OrderRepository orderRepository;
+    private final PetRepository petRepository;
     private final OrderValidator validator;
 
-    public StoreService(OrderRepo orderRepository, PetRepo petRepository, OrderValidator validator) {
+    public StoreService(OrderRepository orderRepository, PetRepository petRepository, OrderValidator validator) {
         this.orderRepository = orderRepository;
         this.petRepository = petRepository;
         this.validator = validator;

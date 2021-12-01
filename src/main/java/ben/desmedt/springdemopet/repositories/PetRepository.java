@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PetRepo extends JpaRepository<Pet, Long> {
+public interface PetRepository extends JpaRepository<Pet, Long> {
 
     @Query("SELECT p FROM Pet p WHERE p.status IN :stats")
     List<Pet> findAllByStatus(@Param("stats") Pet.Status[] stats);
 
-    @Query( "SELECT p FROM Pet p INNER JOIN p.tags t WHERE t.name IN :tags" )
+    @Query( "SELECT DISTINCT p FROM Pet p INNER JOIN p.tags t WHERE t.name IN :tags" )
     List<Pet> findAllByTags(@Param("tags") String[] tags);
 
 }

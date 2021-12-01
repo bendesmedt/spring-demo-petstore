@@ -65,14 +65,14 @@ public class DataFactory {
 
             pets.add(new Pet()
                     .setName(petName)
-                    .setCategory(categories.get(random.nextInt(categories.size())))
+                    .setCategory(categories != null ? categories.get(random.nextInt(0, categories.size())): null)
                     .setTags(List.of(
                                     tags.get(Math.round(random.nextFloat())), //GENDER
                                     tags.get(random.nextInt(2, 7)),
                                     tags.get(random.nextInt(7, tags.size())) //AGE
                             )
                     )
-                    .setStatus(Pet.Status.values()[random.nextInt(Pet.Status.values().length)])
+                    .setStatus(Pet.Status.values()[random.nextInt(0, Pet.Status.values().length)])
                     .setPhotoUrls(
                             random.ints(3, 0, IMAGES.length)
                                     .mapToObj(i -> IMAGES[i])
