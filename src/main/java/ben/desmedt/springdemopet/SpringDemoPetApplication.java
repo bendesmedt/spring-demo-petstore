@@ -1,13 +1,10 @@
 package ben.desmedt.springdemopet;
 
-import ben.desmedt.springdemopet.models.*;
 import ben.desmedt.springdemopet.repositories.*;
 import ben.desmedt.springdemopet.utils.DataFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
-import java.util.List;
 
 @SpringBootApplication
 public class SpringDemoPetApplication {

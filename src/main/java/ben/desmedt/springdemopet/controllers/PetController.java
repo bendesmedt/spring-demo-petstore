@@ -1,10 +1,12 @@
 package ben.desmedt.springdemopet.controllers;
 
-import ben.desmedt.springdemopet.models.Pet;
 import ben.desmedt.springdemopet.services.PetService;
+import ben.desmedt.springdemopet.models.Pet;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("pet")
@@ -32,7 +34,7 @@ public class PetController {
     @PutMapping
     public ResponseEntity putPet(@RequestBody Pet pet) {
 
-        var saved = petService.update(pet);
+        Optional<Pet> saved = petService.update(pet);
 
         if (saved.isPresent())
             return ResponseEntity

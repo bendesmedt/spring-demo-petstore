@@ -6,6 +6,8 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +21,10 @@ public class Pet implements ValidatableEntity {
     private Long id;
 
     @ManyToOne
+    @NotNull
     private Category category;
 
+    @NotEmpty
     private String name;
 
     @ElementCollection(fetch = FetchType.EAGER)
@@ -31,6 +35,7 @@ public class Pet implements ValidatableEntity {
     private List<Tag> tags;
 
     @Enumerated(EnumType.STRING)
+    @NotNull
     private Status status;
 
     public void addPhotoUrl(String photoUrl) {

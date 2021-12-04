@@ -1,8 +1,8 @@
 package ben.desmedt.springdemopet.utils;
 
 import ben.desmedt.springdemopet.models.Category;
-import ben.desmedt.springdemopet.models.Pet;
 import ben.desmedt.springdemopet.models.Tag;
+import ben.desmedt.springdemopet.models.Pet;
 import ben.desmedt.springdemopet.models.User;
 
 import java.util.ArrayList;
